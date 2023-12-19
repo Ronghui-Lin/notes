@@ -14,7 +14,7 @@ Differing levels of difficulty..
 
 QA system needs to access a large set of info/knowledge. Use IR system to identify a small number of docs from within a large doc collection which are potentially relevant to a request, and attempt to extract the answer from these docs. Finding the answer will require application of an _answer extraction_ component to the retrieved docs
 
-![IR-based Question Answering](./Resources/IRQA.png)
+![IR-based Question Answering](./Resources/IRQA.PNG)
 
 Typical workflow of QA system:
 
@@ -82,7 +82,7 @@ Info contained in a knowledge graph is referred to as _structured data_, since i
 - relations: join entities
 - facts: combo of entities and relations
 
-![ObamaGraph](./Resources/ObamaGraph.png)
+![ObamaGraph](./Resources/ObamaGraph.PNG)
 
 - Use **semantic parsing** method to map natural language q into a formal query statement in a form which can be efficiently executed against a knowledge graph.
 - attempt to answer the q from the knowledge graph using the formatted question.
@@ -134,11 +134,11 @@ Representing words/phrases in a form tht captures their semantic relationship is
 
 The similaritiy between vectors for words w<sub>i</sub> and w<sub>k</sub> can be computed using **cosine similarity**
 
-![Cosine similarity](./Resources/cosine-similarity.png)
+![Cosine similarity](./Resources/cosine-similarity.PNG)
 
 if term _k_ appears in the query and term _i_ in a doc, a revised term weight for term _i_ in doc _j_ could be
 
-![Dcoument weight](./Resources/query-doc-termw-weight.png)
+![Dcoument weight](./Resources/query-doc-termw-weight.PNG)
 
 - the term weight is effectively reduced according to level of similarity between i and k
 - This would require some modifications and extentions to the inverted file based matching scheme (see Text Retrieval)
