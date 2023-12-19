@@ -35,7 +35,7 @@ For unlinked (flat) docs, we can use the metadata such as source/author of the d
 #### PageRank
 takes advantage of the link structure of the web to produce an approx global score for each page. This pagerank is independant of the contents of any given file
 
-![PageRank Formula](./Resources/PageRank.png)
+![PageRank Formula](./Resources/PageRank.PNG)
 
 - j = the WebPage
 - F<sub>j</sub> = set of web pages j points to (outedges)
@@ -47,7 +47,7 @@ takes advantage of the link structure of the web to produce an approx global sco
 
 Note that for a page _v_ pointing to the page _j_, it's contribution to _PR(j)_ depends on the number of links from Page _v_. Assuming _d_ = 1 ..
 
-![PageRank Diagram](./Resources/PageRankD.png)
+![PageRank Diagram](./Resources/PageRankD.PNG)
 
 - Page _A_ has 3 outlinks, it's pageRank is 0.6, since there are 3 outlinks it contributes 0.2 to the pageRank value of each page it points to.
 
