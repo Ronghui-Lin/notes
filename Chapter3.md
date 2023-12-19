@@ -2,7 +2,7 @@
 
 Standard Text Information Retrieval System:
 
-![Standard IR System](./Resources/IR-standard-diagram.png)
+![Standard IR System](./Resources/IR-standard-diagram.PNG)
 
 ### Components of this IR System
 
@@ -89,7 +89,7 @@ Use the frequency a word occurs in a document to measure significance? **no**, f
 
 A good indexing term helps to discriminate one subset of a collection as relevant to request, they reflect a relationship between a document and the collection from which it is selected and enable selection of relevant documents from among the on relevants. Good keywords for retrieval are **not** the most frequent or the rarest, but occur a moderate number of times. _Zipf's 1st Law: frequency X rank = constant_
 
-![Zipf's law diagram](./Resources/Zipf.png)
+![Zipf's law diagram](./Resources/Zipf.PNG)
 
 Because high frequency words aren't too helpful, they can be removed during indexing without impacting on retrieval effectiveness. This is **Stop Word** removal. Typically prepositions and conjunctions - _the, of, a, and_ etc. A list of stop words is usually chosen by experiment or by a standard list eg _Rijsbergen 1979_.
 - Reduces computer memory requirement by >50% by just removing a few stop words! Also improves search efficiency.
@@ -155,7 +155,7 @@ Composed of:
 
 Stores mapping of words (content) to their location in docs in which they appear.
 
-![Inverted File Example](./Resources/Inverted-file.png)
+![Inverted File Example](./Resources/Inverted-file.PNG)
 
 ### Storing Term Locations
 
@@ -215,7 +215,7 @@ _How to know where to find terms appearing in queries within the inverted file?_
 
 **Term lookup efficiency using hash**
 
-![Hash cost](./Resources/Hashing-cost.png)
+![Hash cost](./Resources/Hashing-cost.PNG)
 
 ### Preprocessing Summarised
 
@@ -279,7 +279,7 @@ Used to achieve better retrieval perfomance, allows terms with high utility in d
     - 'terms that occur in fewer docs are more valuable than those occuring in many documents'
     - Collection Frequency Weights AKA Inverse Document Frequency Weights:
 
-![Collection Frequency Weight Formula](./Resources/cfw.png)
+![Collection Frequency Weight Formula](./Resources/cfw.PNG)
 
     - t(i) == search term
     - n(i) == number of documents t(i) occurs in
@@ -298,7 +298,7 @@ Used to achieve better retrieval perfomance, allows terms with high utility in d
     - Without compensating for doc length, longer documents will tend to have higher matching scores because more chances for a term to occur..
     - One _compensation method_ is the normalised average doc length:
 
-    ![ndl(j) Normalised doc length](./Resources/ndl.png)
+    ![ndl(j) Normalised doc length](./Resources/ndl.PNG)
 
 **tf x idf** is a commonly used empirically derived weighting scheme, where the term frequency (tf) is multiplied by the collection frequency weight (idf)
 
@@ -324,11 +324,11 @@ Both the docs and queries are represented as vectors in a _t_-dimensional space,
 
 The **similairty** between the query and each doc d(j) computed as:
 
-![Similarity equation](./Resources/similarity-eq.png)
+![Similarity equation](./Resources/similarity-eq.PNG)
 
 Documents are ranked in **decreasing order** of similarity (Highest sim first)
 
-![2D similarity graph](./Resources/similarity-graph.png)
+![2D similarity graph](./Resources/similarity-graph.PNG)
 
 In the above example, cos(q) > cos(p) so B is more similar to QUERY than A, hence B is ranked higher
 
@@ -346,13 +346,13 @@ _Probability Ranking Principle_ says that ranking docs by decreasing order of pr
 
 Matching Score (ms(j)) for doc d(j) calculation _similar_ to other ranked retrieval schemes:
 
-![Matching Score](./Resources/ms.png)
+![Matching Score](./Resources/ms.PNG)
 
 w(i, j) is a probabilistic weighting scheme and I is the set of all search terms
 
 **Okapi BM25 combined weighting** is an effective probabilistic model developed at City Uni London:
 
-![BM25 Calculation](./Resources/bm25.png)
+![BM25 Calculation](./Resources/bm25.PNG)
 
 where 
 - cw(i,w) == combined weighting scheme 
@@ -395,7 +395,7 @@ Emphasizing/reducing the importance of a query term == inc/dec its weight
 
 Standard relevance feedback for Vector-Space IR developed by Rocchio
 
-![Rocchio query modification](./Resources/rocchio.png)
+![Rocchio query modification](./Resources/rocchio.PNG)
 
     Q' = modified query vector
     Q = initial query vector
@@ -422,7 +422,7 @@ Term reweighting and query expansion are treated separately
 
 Terms **reweighted** by replacing cfw(i) with _rw(i)_ (The Robertson/Sparck Jones weight)
 
-![Robertson/Sparck Jones weight](./Resources/rw.png)
+![Robertson/Sparck Jones weight](./Resources/rw.PNG)
 
     n(i) = number of docs t(i) occurs in
     N = total number of docs in collection archive
@@ -445,7 +445,7 @@ This constant multiple α is typically set between 1.5 and 3.5, and the relevanc
 
 Merging process, where ranked lists generated independently by diff IR systems are merged to give an improved overall retrieval list
 
-![Data Fusion](./Resources/data-fusion.png)
+![Data Fusion](./Resources/data-fusion.PNG)
 
 Because diff weighting schemes are likely to produce matching scores which are incompatible, we may need to look at how we combine all the list
 
@@ -497,7 +497,7 @@ Measurement for the ability of an IR system to not retrieve non-relevants is **p
 
 Mean Average Precision (MAP) is a single measure of search effectiveness for best-match IR. The mean of the folowing:
 
-![Average Precision](./Resources/ap.png)
+![Average Precision](./Resources/ap.PNG)
 
 - generally a higher recall and precision indicate a better IR system
 - often found that adjusting an IR system to improve recall will impair precision, vice versa
